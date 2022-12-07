@@ -1,0 +1,46 @@
+/*Tab button tag*/
+<div class="tab-button-group">
+  <div class="tab-button" id="original-tab">The Original Burmese</div>
+  <div class="tab-button" id="shiitake-tab">Shiitake Mushrooms & Peanuts</div>
+  <div class="tab-button" id="shrimps-tab">Dried Shrimps & Fish Sauce</div>
+</div>
+
+<script> $(function(){
+    let originalTab = '#block-yui_3_17_2_1_1606155397883_11396';
+    let shiitakeTab = '#block-yui_3_17_2_1_1606155397883_12216';
+    let shrimpsTab = '#block-yui_3_17_2_1_1606155397883_13037';
+    let originalTabButton = '#original-tab';
+    let shiitakeTabButton = '#shiitake-tab';    
+    let shrimpsTabButton = '#shrimps-tab';
+
+    /*Initiate the Tabs*/
+    $(shiitakeTab).add(shrimpsTab).addClass('non-active-tab');
+    $(originalTab).addClass('active-tab');
+    $(originalTabButton).addClass('active-tab-button');
+
+    /*Add Actions to Each Button*/    
+    $(originalTabButton).click(function(){
+      $(originalTab).addClass('active-tab').removeClass('non-active-tab');
+      $(shiitakeTab).add(shrimpsTab).addClass('non-active-tab').removeClass('active-tab');
+      $(originalTabButton).addClass('active-tab-button');
+      $(shiitakeTabButton).add(shrimpsTabButton).removeClass('active-tab-button');
+      window.Squarespace.initializeLayoutBlocks(Y);
+    });
+
+    $(shiitakeTabButton).click(function(){
+      $(shiitakeTab).addClass('active-tab').removeClass('non-active-tab');
+      $(originalTab).add(shrimpsTab).addClass('non-active-tab').removeClass('active-tab');
+      $(shiitakeTabButton).addClass('active-tab-button');
+      $(originalTabButton).add(shrimpsTabButton).removeClass('active-tab-button');
+      window.Squarespace.initializeLayoutBlocks(Y);
+    });
+
+    $(shrimpsTabButton).click(function(){
+      $(shrimpsTab).addClass('active-tab').removeClass('non-active-tab');
+      $(shiitakeTab).add(originalTab).addClass('non-active-tab').removeClass('active-tab');
+      $(shrimpsTabButton).addClass('active-tab-button');
+      $(shiitakeTabButton).add(originalTabButton).removeClass('active-tab-button');
+      window.Squarespace.initializeLayoutBlocks(Y);
+    });
+  });
+</script>
