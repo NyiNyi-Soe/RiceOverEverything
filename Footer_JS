@@ -1,0 +1,64 @@
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MZ7XNBS"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+
+
+
+
+<!-- Back To Top Button -->
+<!-- HTML -->
+<button id="back-to-top">
+  <div class="btt-background"></div>
+  <div class="icon">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" aria-labelledby="title" role="img" xmlns:xlink="http://www.w3.org/1999/xlink">
+      <title>Arrow Up</title>
+      <path data-name="layer2" fill="none" stroke="#202020" stroke-miterlimit="10" stroke-width="2" d="M32 10v46" stroke-linejoin="round" stroke-linecap="round"></path>
+      <path data-name="layer1" fill="none" stroke="#202020" stroke-miterlimit="10" stroke-width="2" d="M50 20 L32 4 14 20" stroke-linejoin="round" stroke-linecap="round"></path>
+    </svg>
+  </div>
+  <p class="text">TOP</p>
+</button>
+
+<!-- Javascript -->
+<script>
+(function() {
+  let throttlePause;
+
+  document.addEventListener('click', function(e) {
+    if (!e.target.closest('#back-to-top')) return;
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    })
+  })
+
+  const throttle = (callback, time) => {
+    if (throttlePause) return;
+
+    throttlePause = true;
+    setTimeout(() => {
+      callback();
+      throttlePause = false;
+    }, time);
+  };
+
+  const checkPos = () => {
+    let pos = document.documentElement.scrollTop,
+        revealHeight = window.innerHeight * 1,
+        bttButton = document.querySelector('#back-to-top');
+    if (pos >= revealHeight) {
+      bttButton.classList.add('show');
+    } else {
+      bttButton.classList.remove('show');
+    }
+  }
+
+  window.addEventListener("scroll", () => {
+    throttle(checkPos, 150);
+  });
+  window.addEventListener('DOMContentLoaded', checkPos)
+}());
+</script>
+<!-- End back to top button -->
