@@ -1,0 +1,30 @@
+/*Home Page Code Injection*/
+
+<script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+
+<div class="splash-wrapper">
+<lottie-player src="https://assets2.lottiefiles.com/packages/lf20_y6fybqsu.json"  background="transparent"  speed="1"  style="width: 400px; height: 400;"  loop  autoplay></lottie-player>
+</div>
+
+/*CSS*/
+
+.splash-wrapper{
+  position: fixed;
+  background-color: #fdd8b7;
+  z-index:9999;
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  animation-name: slideOut;
+  animation-fill-mode: forwards;
+  animation-duration: 4s;
+  animation-delay: 2s;
+}
+
+@keyframes slideOut{
+  from {margin-left: 0vw;}
+  to {margin-left: -100vw;}
+} 
