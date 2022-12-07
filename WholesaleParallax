@@ -1,0 +1,39 @@
+/*HTML Tag*/
+<section[data-section-id="5fc56b8f4e98326c02c8460e"]>
+  <div class="section-background">
+  </div>
+  <div class="content-wrapper">
+  </div>
+</section>
+
+/*CSS*/
+.paralax(){
+  content: "";
+  background-size:cover;
+  background-repeat:no-repeat;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  opacity:.55;
+  position: absolute;
+  background-attachment: fixed;
+  @media(max-width:787px){
+    background-attachment: scroll !important;
+  }
+}
+
+[data-section-id="5fc56b8f4e98326c02c8460e"]{
+  .section-background{
+    &::after {
+      .paralax();
+      background-image:url(https://static1.squarespace.com/static/5faa89249cf099364cb6947f/t/5fbea6902dd96f5918cb9152/1606330002006/8.jpg);
+    } 
+  }
+}
+#block-5fc56b90a97599144eb010f1{
+  filter:drop-shadow(-5px 3px 2px #333);
+  padding:25px 25px 30px 30px;
+  width: 75%;
+  margin:auto;
+}
