@@ -7,6 +7,7 @@ Rice over everything is online store website which sells Burmese chilli jars in 
 * Dry Shrimps Chili jar
 
 
+![headshot](Sample_1.png)
 
 
 ## Built On
