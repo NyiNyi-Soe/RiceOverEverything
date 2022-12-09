@@ -6,15 +6,10 @@ Rice over everything is online store website which sells Burmese chilli jars in 
 * Shiitake Chili jar
 * Dry Shrimps Chili jar
 
-
-![headshot](Sample_1.png)
-
-
 ## Built On
 [Squarespace](https://www.squarespace.com/)
 
 [Homepage Link](https://www.riceovereverything.com/)
-
 
 ## Design By
 
