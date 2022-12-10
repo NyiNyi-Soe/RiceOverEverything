@@ -16,5 +16,5 @@ Rice over everything is online store website which sells Burmese chilli jars in 
 
 ## Design By
 
-* **Nyi Nyi Soe** 
+* [**Nyi Nyi Soe**](https://github.com/NyiNyi-Soe)
 
